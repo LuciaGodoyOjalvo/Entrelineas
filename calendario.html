@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calendario · Entrelíneas</title>
+    <meta name="description" content="Todas las quedadas de tus clubes de lectura en un mismo calendario.">
+    <link rel="icon" href="img/iconos/logo.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Inter:wght@400;500;600&family=Literata:ital,opsz,wght@0,7..72,600;1,7..72,600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/paginas.css">
+</head>
+<body id="arriba">
+
+<!-- ============ ENCABEZADO ============ -->
+<header class="encabezado">
+    <div class="contenedor encabezado__fila">
+        <a href="index.html" class="logo" aria-label="Entrelíneas, inicio">
+            <img src="img/iconos/logo.svg" alt="" width="40" height="40" class="logo__icono">
+            <span class="logo__texto">Entrelíneas</span>
+        </a>
+
+        <nav class="menu-principal" id="menuPrincipal" aria-label="Menú principal">
+            <a href="index.html" class="menu-principal__enlace">Inicio</a>
+            <a href="clubes.html" class="menu-principal__enlace">Clubes</a>
+            <a href="calendario.html" class="menu-principal__enlace activo" aria-current="page">Calendario</a>
+            <a href="lecturas.html" class="menu-principal__enlace">Lecturas</a>
+            <a href="debates.html" class="menu-principal__enlace">Debates</a>
+        </nav>
+
+        <div class="acceso">
+            <a href="#" class="enlace-fuerte">Entrar</a>
+            <a href="#" class="boton boton--mediano solo-escritorio">Crear cuenta</a>
+            <button type="button" class="boton-menu solo-movil" id="botonMenu"
+                    aria-label="Abrir menú" aria-expanded="false" aria-controls="menuPrincipal">
+                <img src="img/iconos/menu.svg" alt="" width="22" height="22">
+            </button>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- ============ CABECERA DE PÁGINA ============ -->
+    <section class="cabecera-pagina">
+        <div class="contenedor">
+            <p class="manuscrita cabecera-pagina__antetitulo">para no perderte ninguna quedada</p>
+            <h1 class="cabecera-pagina__titulo">Calendario</h1>
+            <p class="texto-grande cabecera-pagina__intro">Todas las quedadas de tus clubes en un mismo sitio. Toca un día para ver a qué hora y dónde quedáis.</p>
+        </div>
+    </section>
+
+    <section class="cuerpo-pagina">
+        <div class="contenedor calendario-layout">
+            <div class="calendario">
+                <div class="calendario__cabecera">
+                    <h2 class="calendario__mes" id="tituloMes" aria-live="polite">Mes</h2>
+                    <label class="interruptor">
+                        <input type="checkbox" id="soloMisClubes" checked>
+                        Solo mis clubes
+                    </label>
+                    <div class="calendario__navegacion">
+                        <button type="button" class="boton-icono" id="mesAnterior" aria-label="Mes anterior">←</button>
+                        <button type="button" class="boton boton--mediano boton--secundario" id="botonHoy">Hoy</button>
+                        <button type="button" class="boton-icono" id="mesSiguiente" aria-label="Mes siguiente">→</button>
+                    </div>
+                </div>
+
+                <div class="calendario__semana" aria-hidden="true">
+                    <span>Lun</span><span>Mar</span><span>Mié</span><span>Jue</span><span>Vie</span><span>Sáb</span><span>Dom</span>
+                </div>
+                <div class="calendario__dias" id="diasCalendario"></div>
+            </div>
+
+            <aside class="agenda" aria-labelledby="tituloAgenda">
+                <p class="antetitulo-mini rosa-oscuro">Quedadas del día</p>
+                <h2 class="agenda__titulo" id="tituloAgenda">Hoy</h2>
+                <ul class="agenda__lista" id="listaAgenda"></ul>
+                <p class="agenda__vacio" id="agendaVacia" hidden>Este día no hay quedadas. ¡Día de leer a tu aire!</p>
+            </aside>
+        </div>
+    </section>
+</main>
+
+<!-- ============ PIE DE PÁGINA ============ -->
+<footer class="pie">
+    <div class="contenedor">
+        <div class="pie__superior">
+            <div class="pie__contacto">
+                <p class="pie__titulo">¿Hablamos?</p>
+                <p class="pie__correo">Escríbenos a <a href="#">[correo de contacto]</a></p>
+            </div>
+
+            <nav class="pie__enlaces solo-escritorio" aria-label="Enlaces del pie">
+                <ul>
+                    <li class="pie__cabecera-lista">Plataforma</li>
+                    <li><a href="clubes.html">Clubes</a></li>
+                    <li><a href="calendario.html">Calendario</a></li>
+                    <li><a href="lecturas.html">Lecturas</a></li>
+                    <li><a href="debates.html">Debates</a></li>
+                </ul>
+                <ul>
+                    <li class="pie__cabecera-lista">Ayuda</li>
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                    <li><a href="#">Guía para coordinadores</a></li>
+                    <li><a href="#">Soporte técnico</a></li>
+                </ul>
+                <ul>
+                    <li class="pie__cabecera-lista">Legal</li>
+                    <li><a href="#">Aviso legal</a></li>
+                    <li><a href="#">Privacidad</a></li>
+                    <li><a href="#">Cookies</a></li>
+                    <li><a href="#">Accesibilidad</a></li>
+                </ul>
+            </nav>
+
+            <ul class="pie__enlaces-movil solo-movil">
+                <li><a href="#">Ayuda</a></li>
+                <li><a href="#">Guía para coordinadores</a></li>
+                <li><a href="#">Aviso legal</a></li>
+                <li><a href="#">Privacidad</a></li>
+                <li><a href="#">Cookies</a></li>
+                <li><a href="#">Accesibilidad</a></li>
+            </ul>
+        </div>
+
+        <p class="pie__marca" aria-hidden="true">Entrelíneas</p>
+
+        <div class="pie__copyright">
+            <p class="mb-0">© 2026 Entrelíneas · Proyecto académico (VS2DAW)</p>
+            <a href="#arriba" class="solo-escritorio">Volver arriba ↑</a>
+        </div>
+    </div>
+</footer>
+
+<!-- ============ NAVEGACIÓN INFERIOR (móvil) ============ -->
+<nav class="nav-inferior solo-movil" aria-label="Navegación principal">
+    <a href="index.html" class="nav-inferior__pestana">
+        <img src="img/iconos/inicio.svg" alt="" width="22" height="22">Inicio
+    </a>
+    <a href="clubes.html" class="nav-inferior__pestana">
+        <img src="img/iconos/clubes.svg" alt="" width="22" height="22">Clubes
+    </a>
+    <a href="calendario.html" class="nav-inferior__pestana activa" aria-current="page">
+        <img src="img/iconos/calendario.svg" alt="" width="22" height="22">Calendario
+    </a>
+    <a href="lecturas.html" class="nav-inferior__pestana">
+        <img src="img/iconos/lecturas.svg" alt="" width="22" height="22">Lecturas
+    </a>
+    <a href="debates.html" class="nav-inferior__pestana">
+        <img src="img/iconos/debates.svg" alt="" width="22" height="22">Debates
+    </a>
+</nav>
+
+<p class="aviso-vivo" id="avisoVivo" role="status" aria-live="polite"></p>
+
+<script src="js/datos.js"></script>
+<script src="js/comun.js"></script>
+<script src="js/calendario.js"></script>
+</body>
+</html>

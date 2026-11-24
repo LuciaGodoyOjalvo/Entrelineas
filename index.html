@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Entrelíneas · Clubes de lectura</title>
+    <meta name="description" content="Entrelíneas junta a gente que está leyendo lo mismo que tú. Encuentra tu club, marca por dónde vas y no te pierdas la próxima quedada.">
+    <link rel="icon" href="img/iconos/logo.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Inter:wght@400;500;600&family=Literata:ital,opsz,wght@0,7..72,600;1,7..72,600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body id="arriba">
+
+<!-- ============ ENCABEZADO ============ -->
+<header class="encabezado">
+    <div class="contenedor encabezado__fila">
+        <a href="index.html" class="logo" aria-label="Entrelíneas, inicio">
+            <img src="img/iconos/logo.svg" alt="" width="40" height="40" class="logo__icono">
+            <span class="logo__texto">Entrelíneas</span>
+        </a>
+
+        <nav class="menu-principal" id="menuPrincipal" aria-label="Menú principal">
+            <a href="index.html" class="menu-principal__enlace activo" aria-current="page">Inicio</a>
+            <a href="clubes.html" class="menu-principal__enlace">Clubes</a>
+            <a href="calendario.html" class="menu-principal__enlace">Calendario</a>
+            <a href="lecturas.html" class="menu-principal__enlace">Lecturas</a>
+            <a href="debates.html" class="menu-principal__enlace">Debates</a>
+        </nav>
+
+        <div class="acceso">
+            <a href="#" class="enlace-fuerte">Entrar</a>
+            <a href="#" class="boton boton--mediano solo-escritorio">Crear cuenta</a>
+            <button type="button" class="boton-menu solo-movil" id="botonMenu"
+                    aria-label="Abrir menú" aria-expanded="false" aria-controls="menuPrincipal">
+                <img src="img/iconos/menu.svg" alt="" width="22" height="22">
+            </button>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- ============ PRESENTACIÓN ============ -->
+    <section class="presentacion">
+        <div class="contenedor presentacion__fila">
+            <div class="presentacion__texto">
+                <p class="manuscrita presentacion__antetitulo">
+                    <span class="solo-escritorio">para quien acaba un libro y necesita comentarlo con alguien</span>
+                    <span class="solo-movil">para quien necesita comentar el final con alguien</span>
+                </p>
+
+                <h1 class="presentacion__titulo">
+                    <span class="d-block">Lee a tu ritmo.</span>
+                    <span class="presentacion__segunda-linea">
+                        <span>Comenta</span>
+                        <span class="subrayado-rosa"><em>en compañía.</em></span>
+                    </span>
+                </h1>
+
+                <p class="texto-grande presentacion__intro">
+                    <span class="solo-escritorio">Entrelíneas junta a gente que está leyendo lo mismo que tú. </span>Encuentra tu club, marca por dónde vas y no te pierdas la próxima quedada.
+                </p>
+
+                <p class="enlace-fuerte presentacion__pregunta" id="preguntaAnimo">¿Qué te apetece leer ahora?</p>
+
+                <div class="etiquetas-animo" role="group" aria-labelledby="preguntaAnimo">
+                    <button type="button" class="etiqueta" style="--giro: 2deg" aria-pressed="false">Algo que me enganche</button>
+                    <button type="button" class="etiqueta" style="--giro: -1deg" aria-pressed="true">Un clásico sin prisas</button>
+                    <button type="button" class="etiqueta" style="--giro: 1deg" aria-pressed="false">Misterio para el finde</button>
+                    <button type="button" class="etiqueta solo-escritorio" style="--giro: -2deg" aria-pressed="false">Leer en inglés</button>
+                    <button type="button" class="etiqueta solo-escritorio" style="--giro: 1.5deg" aria-pressed="false">Novela gráfica</button>
+                    <button type="button" class="etiqueta" style="--giro: -1deg" aria-pressed="false">Lo que decida el grupo</button>
+                </div>
+
+                <div class="presentacion__acciones">
+                    <a href="clubes.html" class="boton boton--grande">Ver clubes para mí</a>
+                    <a href="#coordinadores" class="enlace-fuerte enlace-turquesa">o crea el tuyo →</a>
+                </div>
+            </div>
+
+            <!-- Collage (escritorio) -->
+            <div class="collage solo-escritorio" aria-hidden="true">
+                <div class="tarjeta-lectura">
+                    <p class="antetitulo-mini">Tu lectura</p>
+                    <p class="tarjeta-lectura__titulo">Orgullo y prejuicio</p>
+                    <p class="tarjeta-lectura__capitulo">Vas por el capítulo 12 de 61</p>
+                    <div class="progreso"><div class="progreso__barra" style="width: 20%"></div></div>
+                </div>
+
+                <div class="entrada collage__entrada">
+                    <div class="entrada__resguardo">
+                        <span class="antetitulo-mini">Martes</span>
+                        <span class="entrada__hora">18:30</span>
+                    </div>
+                    <div class="entrada__datos">
+                        <span class="antetitulo-mini">Próxima quedada</span>
+                        <span class="entrada__club">Lectoras del martes</span>
+                        <span class="texto-pequeno secundario">Biblioteca municipal · Sala 2</span>
+                        <span class="texto-pequeno enlace-turquesa fw-semibold">Capítulos 13 a 24</span>
+                    </div>
+                </div>
+
+                <div class="nota-adhesiva">
+                    <p class="manuscrita">¡Votad el próximo libro antes del viernes!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PRÓXIMA QUEDADA (móvil) ============ -->
+    <section class="proxima-quedada solo-movil" aria-label="Próxima quedada">
+        <div class="entrada entrada--movil">
+            <div class="entrada__resguardo">
+                <span class="antetitulo-mini">Martes</span>
+                <span class="entrada__hora">18:30</span>
+            </div>
+            <div class="entrada__datos">
+                <span class="antetitulo-mini">Próxima quedada</span>
+                <span class="entrada__club">Lectoras del martes</span>
+                <span class="texto-pequeno secundario">Biblioteca · Cap. 13 a 24</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ ESTANTERÍA ============ -->
+    <section class="estanteria seccion-blanca" id="estanteria">
+        <div class="contenedor">
+            <div class="estanteria__cabecera">
+                <div>
+                    <h2 class="titulo-h2">Lo que se está leyendo ahora</h2>
+                    <p class="texto-grande secundario mb-0">
+                        <span class="solo-escritorio">Cada lomo es un club abierto. Elige uno y mira quién lo está leyendo.</span>
+                        <span class="solo-movil">Toca un lomo para ver qué club lo lee.</span>
+                    </p>
+                </div>
+                <a href="clubes.html" class="enlace-fuerte enlace-turquesa solo-escritorio">Ver todos los clubes →</a>
+            </div>
+
+            <div class="estante">
+                <div class="estante__libros">
+                    <div class="lomos" role="group" aria-label="Libros que se están leyendo">
+                        <button type="button" class="lomo lomo--turquesa-medio" style="--alto: 280px; --ancho: 66px" data-libro="orgullo">Orgullo y prejuicio</button>
+                        <button type="button" class="lomo lomo--tinta" style="--alto: 246px; --ancho: 58px" data-libro="frankenstein" aria-pressed="true">Frankenstein</button>
+                        <button type="button" class="lomo lomo--rosa" style="--alto: 300px; --ancho: 80px" data-libro="regenta">La Regenta</button>
+                        <button type="button" class="lomo lomo--turquesa-suave" style="--alto: 232px; --ancho: 54px" data-libro="dracula">Drácula</button>
+                        <button type="button" class="lomo lomo--rosa-suave" style="--alto: 264px; --ancho: 64px" data-libro="mujercitas">Mujercitas</button>
+                        <button type="button" class="lomo lomo--turquesa-oscuro" style="--alto: 216px; --ancho: 50px" data-libro="niebla">Niebla</button>
+                        <button type="button" class="lomo lomo--tinta" style="--alto: 276px; --ancho: 60px" data-libro="jane">Jane Eyre</button>
+                        <button type="button" class="lomo lomo--turquesa-medio solo-escritorio" style="--alto: 296px; --ancho: 76px" data-libro="cumbres">Cumbres borrascosas</button>
+                        <button type="button" class="lomo lomo--rosa solo-escritorio" style="--alto: 226px; --ancho: 52px" data-libro="marianela">Marianela</button>
+                        <button type="button" class="lomo lomo--turquesa-suave" style="--alto: 288px; --ancho: 68px" data-libro="moby">Moby Dick</button>
+                        <a href="#" class="lomo lomo--proponer solo-escritorio" style="--alto: 250px; --ancho: 64px">Propón un libro +</a>
+                    </div>
+                    <div class="balda"></div>
+                </div>
+
+                <aside class="libro-elegido" id="libroElegido" aria-live="polite">
+                    <p class="antetitulo-mini rosa-oscuro">Has elegido</p>
+                    <p class="libro-elegido__titulo" id="elegidoTitulo">Frankenstein</p>
+                    <p class="secundario mb-0" id="elegidoAutor">Mary Shelley</p>
+                    <hr class="libro-elegido__separador">
+                    <dl class="libro-elegido__datos">
+                        <div><dt>Club</dt><dd id="elegidoClub">Noches de terror</dd></div>
+                        <div><dt>Lectores</dt><dd id="elegidoLectores">9 personas</dd></div>
+                        <div><dt>Quedada</dt><dd id="elegidoQuedada">Jueves, 20:00 · en línea</dd></div>
+                    </dl>
+                    <a href="clubes.html#noches-terror" class="boton boton--mediano w-100" id="elegidoBoton">Unirme al club</a>
+                </aside>
+            </div>
+
+            <a href="clubes.html" class="enlace-fuerte enlace-turquesa solo-movil estanteria__ver-todos">Ver todos los clubes →</a>
+        </div>
+    </section>
+
+    <!-- ============ DEBATES POR CAPÍTULO ============ -->
+    <section class="debates" id="debates">
+        <div class="contenedor debates__fila">
+            <div class="debates__texto">
+                <p class="antetitulo">Debates sin destripes</p>
+                <h2 class="titulo-h2">Cada capítulo tiene su conversación</h2>
+                <p class="texto-grande secundario">
+                    <span class="solo-escritorio">Comenta cuando llegues. </span>Los hilos de los capítulos que aún no has leído se quedan cerrados<span class="solo-escritorio">, para que nadie te cuente el final</span>.
+                </p>
+                <p class="manuscrita debates__nota solo-escritorio">sí, también el del final del libro</p>
+            </div>
+
+            <div class="hilo">
+                <div class="hilo__capitulos" role="tablist" aria-label="Capítulos">
+                    <button type="button" class="capitulo solo-escritorio" role="tab" aria-selected="false" data-cap="10">Cap. 10</button>
+                    <button type="button" class="capitulo" role="tab" aria-selected="false" data-cap="11">Cap. 11</button>
+                    <button type="button" class="capitulo" role="tab" aria-selected="true" data-cap="12">Cap. 12</button>
+                    <button type="button" class="capitulo capitulo--cerrado" role="tab" aria-selected="false" aria-disabled="true" data-cap="13">
+                        <img src="img/iconos/candado.svg" alt="" width="18" height="18">Cap. 13
+                    </button>
+                    <span class="hilo__espacio"></span>
+                    <span class="etiqueta-ejemplo solo-escritorio">Ejemplo</span>
+                </div>
+
+                <div class="hilo__mensajes" id="hiloMensajes" role="tabpanel">
+                    <div class="mensaje">
+                        <span class="avatar avatar--rosa">M</span>
+                        <div>
+                            <p class="mensaje__autor"><strong>Marta</strong><span class="solo-escritorio">  ·  capítulo 12</span></p>
+                            <p class="mensaje__texto">La carta de Darcy lo cambia todo.<span class="solo-escritorio"> ¿Alguien más ha vuelto a leer la primera parte?</span></p>
+                        </div>
+                    </div>
+                    <div class="mensaje">
+                        <span class="avatar avatar--turquesa">J</span>
+                        <div>
+                            <p class="mensaje__autor"><strong>Javier</strong><span class="solo-escritorio">  ·  capítulo 12</span></p>
+                            <p class="mensaje__texto"><span class="solo-escritorio">Yo sí. </span>Elizabeth se precipita, pero él tampoco se explica<span class="solo-escritorio"> nada bien</span>.</p>
+                        </div>
+                    </div>
+                    <div class="mensaje solo-escritorio">
+                        <span class="avatar avatar--rosa-suave">A</span>
+                        <div>
+                            <p class="mensaje__autor"><strong>Aurora</strong>  ·  capítulo 12</p>
+                            <p class="mensaje__texto">Propongo que lo hablemos el martes, que da para rato.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="capitulo-cerrado solo-escritorio">
+                    <img src="img/iconos/candado-aviso.svg" alt="" width="18" height="18">
+                    <span>El hilo del capítulo 13 se abrirá cuando marques que lo has leído.</span>
+                </div>
+
+                <form class="responder solo-escritorio" id="formResponder">
+                    <label for="campoRespuesta" class="visually-hidden">Escribe un mensaje</label>
+                    <input type="text" id="campoRespuesta" class="responder__campo" placeholder="Escribe en el hilo del capítulo 12…" autocomplete="off">
+                    <button type="submit" class="boton boton--mediano">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ ASÍ FUNCIONA ============ -->
+    <section class="funciona seccion-blanca">
+        <div class="contenedor">
+            <div class="funciona__cabecera">
+                <h2 class="titulo-h2 mb-0">Así funciona</h2>
+                <p class="manuscrita funciona__nota mb-0">
+                    <span class="solo-escritorio">(tres pasos, prometido)</span>
+                    <span class="solo-movil">(tres pasos)</span>
+                </p>
+            </div>
+
+            <ol class="pasos">
+                <li class="paso">
+                    <span class="paso__numero rosa">1</span>
+                    <div class="paso__texto">
+                        <h3 class="paso__titulo">Elige un club</h3>
+                        <p class="paso__descripcion">Por ciudad, por libro o por lo que te apetezca<span class="solo-escritorio"> leer ahora</span>.</p>
+                    </div>
+                </li>
+                <li class="paso">
+                    <span class="paso__numero turquesa">2</span>
+                    <div class="paso__texto">
+                        <h3 class="paso__titulo">Lee a tu ritmo</h3>
+                        <p class="paso__descripcion">
+                            <span class="solo-escritorio">Marca el capítulo por el que vas y la web solo te enseña lo que ya has leído.</span>
+                            <span class="solo-movil">Marca el capítulo y solo verás lo que ya has leído.</span>
+                        </p>
+                    </div>
+                </li>
+                <li class="paso paso--sin-linea">
+                    <span class="paso__numero rosa">3</span>
+                    <div class="paso__texto">
+                        <h3 class="paso__titulo">Quedad y votad</h3>
+                        <p class="paso__descripcion">
+                            <span class="solo-escritorio">Las quedadas aparecen en tu calendario y el grupo vota el siguiente libro.</span>
+                            <span class="solo-movil">Quedadas en tu calendario y votación del siguiente libro.</span>
+                        </p>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- ============ PARA COORDINADORES ============ -->
+    <section class="coordinadores" id="coordinadores">
+        <div class="contenedor coordinadores__fila">
+            <div class="coordinadores__texto">
+                <p class="antetitulo">Para quien coordina</p>
+                <h2 class="titulo-h2">Tu club, sin hojas de cálculo</h2>
+                <p class="texto-grande secundario coordinadores__intro">
+                    Miembros, quedadas y votaciones en un mismo panel.<span class="solo-escritorio"> Lo que antes eran veinte mensajes, ahora es un clic.</span>
+                </p>
+                <ul class="lista-check solo-escritorio">
+                    <li><img src="img/iconos/check.svg" alt="" width="22" height="22">Altas y bajas de miembros</li>
+                    <li><img src="img/iconos/check.svg" alt="" width="22" height="22">Calendario de quedadas con aviso</li>
+                    <li><img src="img/iconos/check.svg" alt="" width="22" height="22">Votación del próximo libro</li>
+                </ul>
+                <a href="#" class="boton boton--grande coordinadores__boton">Crear un club</a>
+            </div>
+
+            <div class="panel-votacion solo-escritorio">
+                <div class="panel-votacion__cabecera">
+                    <div>
+                        <p class="antetitulo-mini secundario">Votación</p>
+                        <p class="panel-votacion__titulo">Próximo libro</p>
+                    </div>
+                    <span class="panel-votacion__cierre">Cierra el viernes</span>
+                </div>
+
+                <div class="voto">
+                    <div class="voto__fila"><strong>Jane Eyre</strong><span>46 %</span></div>
+                    <div class="barra"><div class="barra__relleno turquesa-medio" style="width: 46%"></div></div>
+                </div>
+                <div class="voto">
+                    <div class="voto__fila"><strong>Drácula</strong><span>32 %</span></div>
+                    <div class="barra"><div class="barra__relleno rosa-acento" style="width: 32%"></div></div>
+                </div>
+                <div class="voto">
+                    <div class="voto__fila"><strong>Niebla</strong><span>22 %</span></div>
+                    <div class="barra"><div class="barra__relleno turquesa-suave" style="width: 22%"></div></div>
+                </div>
+
+                <p class="texto-pequeno secundario mb-0">14 de 18 miembros han votado</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- ============ PIE DE PÁGINA ============ -->
+<footer class="pie">
+    <div class="contenedor">
+        <div class="pie__superior">
+            <div class="pie__contacto">
+                <p class="pie__titulo">¿Hablamos?</p>
+                <p class="pie__correo">Escríbenos a <a href="#">[correo de contacto]</a></p>
+            </div>
+
+            <nav class="pie__enlaces solo-escritorio" aria-label="Enlaces del pie">
+                <ul>
+                    <li class="pie__cabecera-lista">Plataforma</li>
+                    <li><a href="clubes.html">Clubes</a></li>
+                    <li><a href="calendario.html">Calendario</a></li>
+                    <li><a href="lecturas.html">Lecturas</a></li>
+                    <li><a href="debates.html">Debates</a></li>
+                </ul>
+                <ul>
+                    <li class="pie__cabecera-lista">Ayuda</li>
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                    <li><a href="#">Guía para coordinadores</a></li>
+                    <li><a href="#">Soporte técnico</a></li>
+                </ul>
+                <ul>
+                    <li class="pie__cabecera-lista">Legal</li>
+                    <li><a href="#">Aviso legal</a></li>
+                    <li><a href="#">Privacidad</a></li>
+                    <li><a href="#">Cookies</a></li>
+                    <li><a href="#">Accesibilidad</a></li>
+                </ul>
+            </nav>
+
+            <ul class="pie__enlaces-movil solo-movil">
+                <li><a href="#">Ayuda</a></li>
+                <li><a href="#">Guía para coordinadores</a></li>
+                <li><a href="#">Aviso legal</a></li>
+                <li><a href="#">Privacidad</a></li>
+                <li><a href="#">Cookies</a></li>
+                <li><a href="#">Accesibilidad</a></li>
+            </ul>
+        </div>
+
+        <p class="pie__marca" aria-hidden="true">Entrelíneas</p>
+
+        <div class="pie__copyright">
+            <p class="mb-0">© 2026 Entrelíneas · Proyecto académico (VS2DAW)</p>
+            <a href="#arriba" class="solo-escritorio">Volver arriba ↑</a>
+        </div>
+    </div>
+</footer>
+
+<!-- ============ NAVEGACIÓN INFERIOR (móvil) ============ -->
+<nav class="nav-inferior solo-movil" aria-label="Navegación principal">
+    <a href="index.html" class="nav-inferior__pestana activa" aria-current="page">
+        <img src="img/iconos/inicio.svg" alt="" width="22" height="22">Inicio
+    </a>
+    <a href="clubes.html" class="nav-inferior__pestana">
+        <img src="img/iconos/clubes.svg" alt="" width="22" height="22">Clubes
+    </a>
+    <a href="calendario.html" class="nav-inferior__pestana">
+        <img src="img/iconos/calendario.svg" alt="" width="22" height="22">Calendario
+    </a>
+    <a href="lecturas.html" class="nav-inferior__pestana">
+        <img src="img/iconos/lecturas.svg" alt="" width="22" height="22">Lecturas
+    </a>
+    <a href="debates.html" class="nav-inferior__pestana">
+        <img src="img/iconos/debates.svg" alt="" width="22" height="22">Debates
+    </a>
+</nav>
+
+<script src="js/datos.js"></script>
+<script src="js/comun.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

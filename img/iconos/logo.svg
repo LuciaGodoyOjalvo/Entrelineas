@@ -1,0 +1,13 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icono/Logo Entrel&#195;&#173;neas" clip-path="url(#clip0_0_20)">
+<path id="Vector" d="M6.25 6.25H33.75C34.7446 6.25 35.6984 6.64509 36.4016 7.34835C37.1049 8.05161 37.5 9.00544 37.5 10V25C37.5 25.9946 37.1049 26.9484 36.4016 27.6517C35.6984 28.3549 34.7446 28.75 33.75 28.75H17.5L10.625 34.375V28.75H6.25C5.25544 28.75 4.30161 28.3549 3.59835 27.6517C2.89509 26.9484 2.5 25.9946 2.5 25V10C2.5 9.00544 2.89509 8.05161 3.59835 7.34835C4.30161 6.64509 5.25544 6.25 6.25 6.25Z" fill="#178F8A"/>
+<path id="Vector_2" d="M20 13.75C16.875 11.5625 12.5 11.25 8.75 12.1875V23.125C12.5 22.1875 16.875 22.5 20 24.6875V13.75Z" stroke-width="2.6" stroke-linejoin="round" stroke="white"/>
+<path id="Vector_3" d="M20 13.75C23.125 11.5625 27.5 11.25 31.25 12.1875V23.125C27.5 22.1875 23.125 22.5 20 24.6875V13.75Z" stroke-width="2.6" stroke-linejoin="round" stroke="white"/>
+<path id="Vector_4" d="M35 11.25C37.4162 11.25 39.375 9.29125 39.375 6.875C39.375 4.45875 37.4162 2.5 35 2.5C32.5838 2.5 30.625 4.45875 30.625 6.875C30.625 9.29125 32.5838 11.25 35 11.25Z" fill="#EE7A9B" stroke-width="2.5" stroke="white"/>
+</g>
+<defs>
+<clipPath id="clip0_0_20">
+<rect width="40" height="40" fill="white"/>
+</clipPath>
+</defs>
+</svg>
